@@ -1,6 +1,7 @@
 {/* <p>Now I can render any React component on any DOM node I want using ReactDOM.render</p> */}
 import { useState, useEffect } from "react";
 import React from "react";
+import { marked } from "marked";
 import './../styles/App.css'
 
 const App = () => {
@@ -28,7 +29,7 @@ const App = () => {
 
             <div className="preview">
                 {loading ? (<p className="loading">Loading...</p>)
-                : (<h1 dangerouslySetInnerHTML={{__html: markdown}}></h1>)}
+                : (<h1 dangerouslySetInnerHTML={{__html: marked(markdown)}}></h1>)}
             </div>
         </div>
     )
