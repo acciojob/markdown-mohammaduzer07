@@ -25,11 +25,10 @@ const App = () => {
             <div className="textarea">
                 <textarea value={markdown} onChange={handleOnChange} placeholder="write your mark here"/>
             </div>
-            <div className="pre">
-                <div className="preview">
-                    {loading ? (<p className="loading">Loading...</p>)
-                    : (<h1 dangerouslySetInnerHTML={{__html: markdown}}></h1>)}
-                </div>
+
+            <div className="preview">
+                {loading ? (<p className="loading">Loading...</p>)
+                : (<h1 dangerouslySetInnerHTML={{__html: markdown}}></h1>)}
             </div>
         </div>
     )
