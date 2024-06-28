@@ -29,7 +29,7 @@ const App = () => {
 
             <div className="preview">
                 {loading ? (<p className="loading">Loading...</p>)
-                : (<h1 dangerouslySetInnerHTML={{__html: marked(markdown)}}></h1>)}
+                : (<div dangerouslySetInnerHTML={{__html: marked(markdown)}}></div>)}
             </div>
         </div>
     )
