@@ -15,8 +15,8 @@ const App = () => {
         }, 2000)
     }, [markdown])
 
-    const handleOnChange = (e) =>{
-        setMarkdown(e.target.value)
+    const handleOnChange = (event) =>{
+        setMarkdown(event.target.value)
     }
 
     return (
